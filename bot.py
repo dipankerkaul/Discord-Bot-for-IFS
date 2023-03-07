@@ -1,13 +1,15 @@
 
 # bot.py
 # bot.py
-import os
+
+
 
 import discord
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
-TOKEN = "MTA4MjIxMjMwOTM4NjE0OTg5OQ.G43b07.eENdFKz2DZCDHSxk36zv0udn0QifQ1qFEvlnWY"
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client(intents=discord.Intents.default())
 
