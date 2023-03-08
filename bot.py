@@ -117,6 +117,7 @@ client.run(TOKEN)
 # bot.py
 import os
 import random
+import discord
 
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -127,9 +128,9 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix='.',intents=discord.Intents.all())
 print(bot.get_all_channels())
 
-@bot.command(name='99')
+@bot.command(name='Hitler')
 async def nine_nine(ctx):
-    print("rape")
+    print("it runs!")
     brooklyn_99_quotes = [
         'I\'m the human form of the 💯 emoji.',
         'Bingpot!',
@@ -139,7 +140,7 @@ async def nine_nine(ctx):
         ),
     ]
 
-    response = random.choice(brooklyn_99_quotes)
+    response = "was the best dude alive!!!"
     await ctx.send(response)
 
 bot.run(TOKEN)
