@@ -34,6 +34,8 @@ async def on_ready():
 client.run(TOKEN)
 
 '''
+import discord
+
 '''
 import discord
 from discord.ext import tasks
@@ -63,6 +65,7 @@ async def my_setup_hook():
 client.setup_hook = my_setup_hook
 
 client.run(TOKEN)
+'''
 '''
 # bot.py
 import os
@@ -108,6 +111,40 @@ async def on_message(message):
         await message.channel.send(response)
 
 client.run(TOKEN)
+'''
+
+# bot.py
+# bot.py
+import os
+import random
+
+from discord.ext import commands
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+
+bot = commands.Bot(command_prefix='.',intents=discord.Intents.all())
+print(bot.get_all_channels())
+
+@bot.command(name='99')
+async def nine_nine(ctx):
+    print("rape")
+    brooklyn_99_quotes = [
+        'I\'m the human form of the 💯 emoji.',
+        'Bingpot!',
+        (
+            'Cool. Cool cool cool cool cool cool cool, '
+            'no doubt no doubt no doubt no doubt.'
+        ),
+    ]
+
+    response = random.choice(brooklyn_99_quotes)
+    await ctx.send(response)
+
+bot.run(TOKEN)
+
+
 
 
 
