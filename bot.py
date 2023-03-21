@@ -128,7 +128,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix='.',intents=discord.Intents.all())
 print(bot.get_all_channels())
 
-@bot.command(name='Hitler')
+@bot.command(name='Construct')
 async def nine_nine(ctx):
     print("it runs!")
     brooklyn_99_quotes = [
@@ -140,7 +140,7 @@ async def nine_nine(ctx):
         ),
     ]
 
-    response = "was the best dude alive!!!"
+    response = "She is an Eren simp!"
     await ctx.send(response)
 
 bot.run(TOKEN)
